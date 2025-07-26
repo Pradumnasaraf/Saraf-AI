@@ -4,8 +4,7 @@ Saraf AI is a chat assistant built with Next.js. It uses the OpenAI API framewor
 
 ## Demo
 
-https://github.com/user-attachments/assets/6e854bd0-9640-4f55-8bd6-dd355ad3605e
-
+https://github.com/user-attachments/assets/077a8f8b-bf6d-4a79-a672-05a89e01eeec
 
 ## Prerequisites
 
@@ -14,7 +13,7 @@ https://github.com/user-attachments/assets/6e854bd0-9640-4f55-8bd6-dd355ad3605e
 ## Setting up the project
 
 1. Clone the repository
-2. Run `docker compose up`. This will start the a LLM model and the Next.js application.
+2. Run `docker compose up`. This will start the an LLM model and the Next.js application.
 3. Open the browser and navigate to `http://localhost:3000`
 
 ## Contributing
