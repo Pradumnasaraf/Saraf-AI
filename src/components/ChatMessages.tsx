@@ -28,7 +28,7 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
             </svg>
           </div>
           <h3 className="text-2xl font-bold gradient-text mb-3">Welcome to Saraf AI</h3>
-          <p className="text-gray-600/80 max-w-md text-lg leading-relaxed">Start a conversation by typing your message below. I'm here to help with anything you need!</p>
+          <p className="text-gray-600/80 max-w-md text-lg leading-relaxed">Start a conversation by typing your message below. I&apos;m here to help with anything you need!</p>
         </div>
       )}
       {messages.map((message) => (
