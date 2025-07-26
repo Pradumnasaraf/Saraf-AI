@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/32fb49de-336b-406a-89ad-c1e9fc80fa60
 ## Getting Started
 
 1. Clone this repository.
-2. Run `docker compose up` — this launches both the LLM model and the Next.js frontend.
+2. Run `docker compose up`. This launches both the LLM model and the Next.js frontend. (Yes, it's that simple :))
 3. Visit `http://localhost:3000` in your browser.
 
 ## Docker Compose Configuration
@@ -43,10 +43,10 @@ This is a typical Docker Compose setup with an added `models` block. You can def
 
 > `AI_MODEL_URL` and `AI_MODEL_NAME` are environment variables automatically generated and get added to the Next.js application by Docker Compose based on the defined model and used by the app to connect to the local LLM.
 
-## Contributing
-
-We welcome contributions! Please open an issue or submit a pull request.
-
 ## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache-2.0 license - see the [LICENSE](LICENSE) file for details.
+
+## Security
+
+If you discover a security vulnerability within this project, please check the [SECURITY](SECURITY.md) for more information.
