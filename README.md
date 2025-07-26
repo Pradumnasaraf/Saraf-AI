@@ -6,7 +6,7 @@ The project leverages the latest Docker Compose support for [running LLM models]
 
 ## Demo
 
-[Click here to view the demo](https://github.com/user-attachments/assets/32fb49de-336b-406a-89ad-c1e9fc80fa60)
+https://github.com/user-attachments/assets/32fb49de-336b-406a-89ad-c1e9fc80fa60
 
 ## Prerequisites
 
