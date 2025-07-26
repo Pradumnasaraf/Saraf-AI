@@ -12,8 +12,8 @@ export default function ChatHeader() {
             <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full border-2 border-white animate-pulse shadow-lg" aria-hidden="true"></div>
           </div>
           <div className="animate-slideIn" style={{animationDelay: '0.1s'}}>
-            <h1 className="text-2xl font-bold gradient-text tracking-tight">Chat Assistant</h1>
-            <p className="text-sm text-gray-500/80 font-medium">AI-powered conversation experience</p>
+            <h1 className="text-2xl font-bold gradient-text tracking-tight">Saraf AI</h1>
+            <p className="text-sm text-gray-500/80 font-medium">Powered by Docker Model Runner</p>
           </div>
         </div>
         <div className="flex items-center gap-3 animate-slideIn" style={{animationDelay: '0.2s'}}>

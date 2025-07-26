@@ -27,7 +27,7 @@ export default function ChatMessages({ messages }: ChatMessagesProps) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold gradient-text mb-3">Welcome to Chat Assistant</h3>
+          <h3 className="text-2xl font-bold gradient-text mb-3">Welcome to Saraf AI</h3>
           <p className="text-gray-600/80 max-w-md text-lg leading-relaxed">Start a conversation by typing your message below. I'm here to help with anything you need!</p>
         </div>
       )}

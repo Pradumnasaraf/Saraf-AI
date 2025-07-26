@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Chat Assistant - AI Powered Conversations",
+  title: "Saraf AI - AI Powered Conversations",
   description: "Beautiful, modern AI chat interface powered by LLM with stunning visual design and seamless user experience",
   keywords: "AI, chat, assistant, conversation, LLM, modern, beautiful",
-  authors: [{ name: "Chat Assistant Team" }],
+  authors: [{ name: "Saraf AI Team" }],
 };
 
 export const viewport: Viewport = {
