@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    models:
+      llm:
+        endpoint_var: AI_MODEL_URL
+        model_var: AI_MODEL_NAME
+    environment:
+      - AI_MODEL_KEY=not-needed
+
+models:
+  llm:
+    model: ai/smollm2
