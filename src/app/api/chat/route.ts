@@ -65,7 +65,7 @@ export async function POST(req: Request) {
     console.error('OpenAI API error:', error);
     
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    const errorStatus = (error as any)?.status || 500;
+    const errorStatus = (error as { status?: number })?.status || 500;
     
     return NextResponse.json(
       { 

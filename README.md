@@ -1,131 +1,52 @@
-# 🤖 Chat Assistant - Beautiful AI Chat Interface
+## Saraf AI
 
-A modern, beautiful AI-powered chat application built with Next.js 15, featuring stunning glass morphism design, smooth animations, and real-time streaming responses.
+**Saraf AI** is a chat assistant built with **Next.js**, using the OpenAI API framework to interface with the [Docker Model Runner](https://docs.docker.com/ai/model-runner). It runs entirely locally, ensuring your data remains private. Communication between the application and the LLM model is handled using the latest Docker Compose support for [running LLM models](https://docs.docker.com/ai/compose/models-and-compose/), enabling seamless and secure integration.
 
-## ✨ Features
+## Demo
 
-- 🎨 **Beautiful Glass Morphism UI** - Modern design with backdrop blur effects
-- 🔄 **Real-time Streaming** - Live AI responses with typing indicators
-- 📱 **Fully Responsive** - Works perfectly on all devices
-- ♿ **Accessible** - Full keyboard navigation and screen reader support
-- 🎭 **Smooth Animations** - Elegant micro-interactions and transitions
-- 🌙 **Dark Mode Ready** - Automatic dark/light theme support
-- ⚡ **Performance Optimized** - Fast loading and smooth scrolling
+https://github.com/user-attachments/assets/32fb49de-336b-406a-89ad-c1e9fc80fa60
 
-## 🚀 Getting Started
+## Prerequisites
 
-### Prerequisites
+- Docker
+- Docker Compose (version **2.38.0** or newer)
 
-- Node.js 18+ 
-- npm, yarn, pnpm, or bun
+## Getting Started
 
-### Installation
+1. Clone this repository.
+2. Run `docker compose up` — this launches both the LLM model and the Next.js frontend.
+3. Visit `http://localhost:3000` in your browser.
 
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd compose-llm
-   ```
+## Docker Compose Configuration
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   ```
+```yaml
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    models:
+      llm:
+        endpoint_var: AI_MODEL_URL
+        model_var: AI_MODEL_NAME
+    environment:
+      - AI_MODEL_KEY=not-needed
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-   
-   Edit `.env.local` with your AI configuration:
-   ```env
-   AI_MODEL_URL=your_ai_model_url_here
-   AI_API_KEY=your_api_key_here
-   AI_MODEL_NAME=your_model_name_here
-   ```
-
-4. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 🏗️ Project Structure
-
-```
-src/
-├── app/
-│   ├── api/chat/          # API route for AI chat
-│   ├── globals.css        # Global styles and animations
-│   ├── layout.tsx         # Root layout component
-│   └── page.tsx           # Main chat page
-├── components/
-│   ├── ChatHeader.tsx     # Chat header with status
-│   ├── ChatInput.tsx      # Message input component
-│   └── ChatMessages.tsx   # Messages display area
-└── types/
-    └── chat.ts            # TypeScript type definitions
+models:
+  llm:
+    model: ai/smollm2
 ```
 
-## 🎨 Design System
+This is a typical Docker Compose setup with an added `models` block. You can define and run multiple models within the same file. To switch models, update the `model` field under `models.llm`.
 
-The application uses a carefully crafted design system featuring:
+> `AI_MODEL_URL` and `AI_MODEL_NAME` are environment variables automatically generated and get added to the Next.js application by Docker Compose based on the defined model and used by the app to connect to the local LLM.
 
-- **Glass Morphism Effects** - Translucent backgrounds with backdrop blur
-- **Gradient Themes** - Beautiful color gradients throughout the UI
-- **Smooth Animations** - Custom CSS animations for enhanced UX
-- **Responsive Typography** - Adaptive text sizing across devices
-- **Accessible Colors** - WCAG compliant color contrast ratios
+## Contributing
 
-## 🔧 Configuration
+We welcome contributions! Please open an issue or submit a pull request.
 
-### Environment Variables
+## License
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `AI_MODEL_URL` | Base URL for your AI model API | ✅ |
-| `AI_API_KEY` | API key for authentication | ✅ |
-| `AI_MODEL_NAME` | Name of the AI model to use | ✅ |
-
-### Customization
-
-You can customize the design by modifying:
-- `src/app/globals.css` - CSS variables and animations
-- `tailwind.config.js` - Tailwind theme configuration
-- Component styles - Individual component styling
-
-## 📱 Browser Support
-
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- [Next.js](https://nextjs.org/) - React framework
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [Geist Font](https://vercel.com/font) - Modern typography
-- [OpenAI](https://openai.com/) - AI API integration
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
