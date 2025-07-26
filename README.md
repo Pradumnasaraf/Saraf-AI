@@ -1,25 +1,54 @@
 ## Saraf AI
 
-Saraf AI is a chat assistant built with Next.js. It uses the OpenAI API framework to communicate with the [Docker Model Runner](https://docs.docker.com/ai/model-runner). It's 100% local and keeps your data private. To connect the pieces, we are using Docker Compose, leveraging its new capability of [running LLM models.](https://docs.docker.com/ai/compose/models-and-compose/)
+**Saraf AI** is a privacy-first local chat assistant built with **Next.js**, using the OpenAI API framework to interface with the [Docker Model Runner](https://docs.docker.com/ai/model-runner). It runs entirely locally and keeps your data private.
+
+The project leverages the latest Docker Compose support for [running LLM models](https://docs.docker.com/ai/compose/models-and-compose/), making integration seamless and secure.
 
 ## Demo
 
-https://github.com/user-attachments/assets/077a8f8b-bf6d-4a79-a672-05a89e01eeec
+[Click here to view the demo](https://github.com/user-attachments/assets/32fb49de-336b-406a-89ad-c1e9fc80fa60)
 
 ## Prerequisites
 
-- Docker and Docker Compose (2.38.0 and later)
+- Docker
+- Docker Compose (version **2.38.0** or newer)
 
-## Setting up the project
+## Getting Started
 
-1. Clone the repository
-2. Run `docker compose up`. This will start the an LLM model and the Next.js application.
-3. Open the browser and navigate to `http://localhost:3000`
+1. Clone this repository.
+2. Run `docker compose up` — this launches both the LLM model and the Next.js frontend.
+3. Visit `http://localhost:3000` in your browser.
+
+## Docker Compose Configuration
+
+```yaml
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    models:
+      llm:
+        endpoint_var: AI_MODEL_URL
+        model_var: AI_MODEL_NAME
+    environment:
+      - AI_MODEL_KEY=not-needed
+
+models:
+  llm:
+    model: ai/smollm2
+```
+
+This is a typical Docker Compose setup with an added `models` block. You can define and run multiple models within the same file. To switch models, update the `model` field under `models.llm`.
+
+> `AI_MODEL_URL` and `AI_MODEL_NAME` are environment variables automatically generated and get added to the Next.js application by Docker Compose based on the defined model and used by the app to connect to the local LLM.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a pull request.
+We welcome contributions! Please open an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
