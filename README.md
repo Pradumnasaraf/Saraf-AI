@@ -1,6 +1,6 @@
 ## Saraf AI
 
-Saraf AI is a chat assistant built with Next.js. It uses the OpenAI API framework to communicate with the Docker Model Runner. It's 100% local and keeps your data private. To connect the pieces, we are using Docker Compose, leveraging its new capability of running LLM models.
+Saraf AI is a chat assistant built with Next.js. It uses the OpenAI API framework to communicate with the [Docker Model Runner](https://docs.docker.com/ai/model-runner). It's 100% local and keeps your data private. To connect the pieces, we are using Docker Compose, leveraging its new capability of [running LLM models.](https://docs.docker.com/ai/compose/models-and-compose/)
 
 ## Demo
 
