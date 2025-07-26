@@ -8,8 +8,7 @@ https://github.com/user-attachments/assets/32fb49de-336b-406a-89ad-c1e9fc80fa60
 
 ## Prerequisites
 
-- Docker
-- Docker Compose (version **2.38.0** or newer)
+- Docker and Docker Compose (version **2.38.0** or newer)
 
 ## Getting Started
 
