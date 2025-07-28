@@ -3,9 +3,21 @@
   "version": "1.1.0",
   "license": "Apache-2.0",
   "author": "Pradumna Saraf",
+  "description": "Saraf AI is a platform for AI-powered content creation and analysis.",
+  "keywords": [
+    "ai",
+    "content",
+    "creation",
+    "analysis",
+    "saraf"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/pradumnasaraf/Saraf-AI"
+  },
+  "homepage": "https://github.com/pradumnasaraf/Saraf-AI",
+  "bugs": {
+    "url": "https://github.com/pradumnasaraf/Saraf-AI/issues"
   },
   "scripts": {
     "dev": "next dev",
