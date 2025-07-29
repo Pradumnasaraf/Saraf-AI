@@ -2,11 +2,11 @@ import OpenAI from 'openai';
 import { NextResponse } from 'next/server';
 
 const openai = new OpenAI({
-  baseURL: process.env.AI_MODEL_URL || '',
-  apiKey: process.env.AI_API_KEY || '',
+  baseURL: process.env.LLM_URL || '',
+  apiKey: "key-not-needed"
 });
 
-const model = process.env.AI_MODEL_NAME || '';
+const model = process.env.LLM || '';
 
 export async function POST(req: Request) {
   try {
