@@ -5,9 +5,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3000:3000
+    # Models to run
     models:
       - llm
 
 models:
+  # Model Name
   llm:
+    # Model Image
     model: ai/smollm2
