@@ -6,7 +6,7 @@ const openai = new OpenAI({
   apiKey: "key-not-needed"
 });
 
-const model = process.env.LLM || '';
+const model = process.env.LLM_MODEL || '';
 
 export async function POST(req: Request) {
   try {
