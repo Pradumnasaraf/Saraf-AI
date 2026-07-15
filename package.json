@@ -26,7 +26,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.4.4",
+    "next": "15.5.18",
     "openai": "^5.10.2",
     "react": "19.2.7",
     "react-dom": "19.2.7"
