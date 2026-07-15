@@ -28,8 +28,8 @@
   "dependencies": {
     "next": "15.4.4",
     "openai": "^5.10.2",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
