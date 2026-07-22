@@ -29,7 +29,7 @@
     "next": "16.2.10",
     "openai": "^6.47.0",
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
