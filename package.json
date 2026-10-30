@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "next": "16.4.3",
-    "openai": "^7.39.0",
+    "openai": "^7.45.0",
     "react": "19.3.1",
     "react-dom": "19.3.1"
   },
